@@ -51,13 +51,13 @@ function updateDiceImages(dice1Value, dice2Value) {
     let diceImages = document.querySelectorAll('img');
 
     // ⭐⭐⭐ CHANGE IMAGE FILE EXTENSION HERE ⭐⭐⭐
-    // If using .png images instead of .svg, change ".svg" to ".png" below
+    // Currently using .png images
 
     // Update first dice image
-    diceImages[0].src = "images/dice" + dice1Value + ".svg";  // ⭐ CHANGE .svg to .png if needed ⭐
+    diceImages[0].src = "images/dice" + dice1Value + ".png";  // ⭐ CHANGE .png to your format if needed ⭐
 
     // Update second dice image
-    diceImages[1].src = "images/dice" + dice2Value + ".svg";  // ⭐ CHANGE .svg to .png if needed ⭐
+    diceImages[1].src = "images/dice" + dice2Value + ".png";  // ⭐ CHANGE .png to your format if needed ⭐
 }
 
 // Function to display the result in the h3 element
