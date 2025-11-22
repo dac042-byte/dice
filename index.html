@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+
+    <!-- Bootstrap CSS for Extra Credit -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .game-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .dice-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .dice-container img {
+            width: 150px;
+            height: 150px;
+            border: 3px solid #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-play {
+            font-size: 20px;
+            padding: 15px 30px;
+            margin: 20px 0;
+        }
+
+        #result {
+            color: #333;
+            min-height: 60px;
+            margin-top: 20px;
+        }
+
+        .balance-display {
+            font-size: 24px;
+            color: #007bff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container game-container">
+        <h1>🎲 Dice Game 🎲</h1>
+
+        <!-- Dice Images Container -->
+        <div class="dice-container">
+            <!--
+                ⚠️ IMPORTANT: Place your dice images in an 'images' folder
+                You need 6 dice images named:
+                - images/dice1.png
+                - images/dice2.png
+                - images/dice3.png
+                - images/dice4.png
+                - images/dice5.png
+                - images/dice6.png
+            -->
+            <img src="images/dice1.png" alt="Dice 1" id="dice1">
+            <img src="images/dice1.png" alt="Dice 2" id="dice2">
+        </div>
+
+        <!-- Play Button -->
+        <button class="btn btn-primary btn-lg btn-play" onclick="startGame()">Let's Play Again</button>
+
+        <!-- Result Display -->
+        <h3 id="result">Click the button to start playing!</h3>
+
+        <!-- Balance Display -->
+        <div class="balance-display">
+            <strong>Balance: $<span id="balance">0</span></strong>
+        </div>
+    </div>
+
+    <!-- Link to JavaScript file -->
+    <script src="index.js"></script>
+</body>
+</html>
