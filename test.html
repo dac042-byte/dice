@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Test</title>
+</head>
+<body>
+    <h1>TEST PAGE - Click button below</h1>
+    <button onclick="alert('Button works!'); testFunction()">TEST BUTTON</button>
+    <h3 id="result">Initial text</h3>
+
+    <script>
+        function testFunction() {
+            document.getElementById("result").innerHTML = "JavaScript is working!";
+        }
+    </script>
+</body>
+</html>
