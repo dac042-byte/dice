@@ -1,0 +1,49 @@
+/* Dice Game Stylesheet */
+
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.game-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.dice-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.dice-container img {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-play {
+    font-size: 20px;
+    padding: 15px 30px;
+    margin: 20px 0;
+}
+
+#result {
+    color: #333;
+    min-height: 60px;
+    margin-top: 20px;
+}
+
+.balance-display {
+    font-size: 24px;
+    color: #007bff;
+    margin-top: 20px;
+}
