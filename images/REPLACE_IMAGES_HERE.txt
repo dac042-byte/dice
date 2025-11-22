@@ -1,0 +1,19 @@
+⭐⭐⭐ REPLACE DICE IMAGES HERE ⭐⭐⭐
+
+This folder contains 6 placeholder dice images.
+Replace them with your own dice images!
+
+Required files:
+├── dice1.svg (or dice1.png) - Shows 1 dot
+├── dice2.svg (or dice2.png) - Shows 2 dots
+├── dice3.svg (or dice3.png) - Shows 3 dots
+├── dice4.svg (or dice4.png) - Shows 4 dots
+├── dice5.svg (or dice5.png) - Shows 5 dots
+└── dice6.svg (or dice6.png) - Shows 6 dots
+
+IMPORTANT:
+- Keep the exact same filenames
+- If using PNG instead of SVG, update index.js and index.html to use .png extension
+- All images should be the same size (recommended: 200x200px)
+
+Current location: /home/user/dice/images/
