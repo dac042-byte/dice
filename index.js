@@ -50,12 +50,14 @@ function updateDiceImages(dice1Value, dice2Value) {
     // Use querySelectorAll to get all dice images (as required by rubric)
     let diceImages = document.querySelectorAll('img');
 
+    // ⭐⭐⭐ CHANGE IMAGE FILE EXTENSION HERE ⭐⭐⭐
+    // If using .png images instead of .svg, change ".svg" to ".png" below
+
     // Update first dice image
-    // ⚠️ Make sure you have images/dice1.svg through images/dice6.svg
-    diceImages[0].src = "images/dice" + dice1Value + ".svg";
+    diceImages[0].src = "images/dice" + dice1Value + ".svg";  // ⭐ CHANGE .svg to .png if needed ⭐
 
     // Update second dice image
-    diceImages[1].src = "images/dice" + dice2Value + ".svg";
+    diceImages[1].src = "images/dice" + dice2Value + ".svg";  // ⭐ CHANGE .svg to .png if needed ⭐
 }
 
 // Function to display the result in the h3 element
