@@ -1,34 +1,9 @@
 // Global variable to keep track of balance across all plays
 let totalBalance = 0;
+let totalRolls = 0;
 
-// Main function that starts the game when button is clicked
-function startGame() {
-    // Prompt user for number of plays
-    let numberOfPlays = prompt("How many plays?");
-
-    // Convert input to a number
-    numberOfPlays = parseInt(numberOfPlays);
-
-    // Validate input
-    if (isNaN(numberOfPlays) || numberOfPlays <= 0) {
-        alert("Please enter a valid number greater than 0!");
-        return;
-    }
-
-    // Reset balance for new game session
-    totalBalance = 0;
-
-    // Play the game the specified number of times
-    for (let i = 0; i < numberOfPlays; i++) {
-        playOnce();
-    }
-
-    // Update the balance display on the page
-    updateBalanceDisplay();
-}
-
-// Function to play one round of the dice game
-function playOnce() {
+// Main function that rolls the dice when button is clicked
+function rollDice() {
     // Roll two dice using the formula from the rubric
     let dice1Value = Math.floor(Math.random() * 6) + 1;
     let dice2Value = Math.floor(Math.random() * 6) + 1;
@@ -59,7 +34,10 @@ function playOnce() {
         outcome = "It's a draw, no money exchanged.";
     }
 
-    // Display the result
+    // Increment total rolls
+    totalRolls++;
+
+    // Display the result (shows both current roll and overall game status)
     displayResult(dice1Value, dice2Value, sum, outcome);
 }
 
@@ -77,25 +55,27 @@ function updateDiceImages(dice1Value, dice2Value) {
 }
 
 // Function to display the result in the h3 element
+// Shows BOTH the current dice result AND the overall game status
 function displayResult(dice1, dice2, sum, outcome) {
     // Get the h3 element
     let resultElement = document.getElementById("result");
 
-    // Update innerHTML with the result
-    resultElement.innerHTML = dice1 + " + " + dice2 + " is " + sum + " — " + outcome;
-}
+    // Build the result message with current roll
+    let message = dice1 + " + " + dice2 + " is " + sum + " — " + outcome;
 
-// Function to update the balance display
-function updateBalanceDisplay() {
-    let balanceElement = document.getElementById("balance");
-    balanceElement.textContent = totalBalance;
+    // Add overall game status
+    message += "<br><br>";
+    message += "<strong>Overall Game:</strong><br>";
+    message += "Total Rolls: " + totalRolls + "<br>";
+    message += "Balance: $" + totalBalance;
 
-    // Change color based on balance
+    // Add color to balance based on value
     if (totalBalance > 0) {
-        balanceElement.style.color = "green";
+        message += " <span style='color: green;'>(Winning!)</span>";
     } else if (totalBalance < 0) {
-        balanceElement.style.color = "red";
-    } else {
-        balanceElement.style.color = "#007bff";
+        message += " <span style='color: red;'>(Losing)</span>";
     }
+
+    // Update innerHTML with the complete result
+    resultElement.innerHTML = message;
 }

@@ -15,6 +15,11 @@
     <div class="container game-container">
         <h1>🎲 Dice Game 🎲</h1>
 
+        <!-- Game Rules -->
+        <h2>If the dice add to 9 or above, you win $5! <br>
+If the dice add to 5 or less, I win $5. <br>
+Ready to play?</h2>
+
         <!-- Dice Images Container -->
         <div class="dice-container">
             <!--
@@ -32,15 +37,10 @@
         </div>
 
         <!-- Play Button -->
-        <button class="btn btn-primary btn-lg btn-play" onclick="startGame()">Let's Play Again</button>
+        <button class="btn btn-primary btn-lg btn-play" onclick="rollDice()">Roll the Dice!</button>
 
         <!-- Result Display -->
-        <h3 id="result">Click the button to start playing!</h3>
-
-        <!-- Balance Display -->
-        <div class="balance-display">
-            <strong>Balance: $<span id="balance">0</span></strong>
-        </div>
+        <h3 id="result">Click the button to roll!</h3>
     </div>
 
     <!-- Link to JavaScript file -->
