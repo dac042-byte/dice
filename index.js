@@ -51,11 +51,11 @@ function updateDiceImages(dice1Value, dice2Value) {
     let diceImages = document.querySelectorAll('img');
 
     // Update first dice image
-    // ⚠️ Make sure you have images/dice1.png through images/dice6.png
-    diceImages[0].src = "images/dice" + dice1Value + ".png";
+    // ⚠️ Make sure you have images/dice1.svg through images/dice6.svg
+    diceImages[0].src = "images/dice" + dice1Value + ".svg";
 
     // Update second dice image
-    diceImages[1].src = "images/dice" + dice2Value + ".png";
+    diceImages[1].src = "images/dice" + dice2Value + ".svg";
 }
 
 // Function to display the result in the h3 element
