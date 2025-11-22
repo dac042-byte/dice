@@ -4,9 +4,13 @@ let totalRolls = 0;
 
 // Main function that rolls the dice when button is clicked
 function rollDice() {
+    console.log("rollDice() function called!"); // DEBUG: Check if function runs
+
     // Roll two dice using the formula from the rubric
     let dice1Value = Math.floor(Math.random() * 6) + 1;
     let dice2Value = Math.floor(Math.random() * 6) + 1;
+
+    console.log("Dice values:", dice1Value, dice2Value); // DEBUG: Check random values
 
     // Update the dice images
     updateDiceImages(dice1Value, dice2Value);
