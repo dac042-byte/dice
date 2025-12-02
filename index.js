@@ -2,10 +2,39 @@
 let totalBalance = 0;
 let totalRolls = 0;
 
-// Main function that rolls the dice when button is clicked
+// Main function that starts the game when button is clicked
+// On button press, prompt for the number of plays
 function rollDice() {
     console.log("rollDice() function called!"); // DEBUG: Check if function runs
 
+    // Prompt user for number of plays
+    let numberOfPlays = prompt("How many plays?");
+
+    // Convert input to a number
+    numberOfPlays = parseInt(numberOfPlays);
+
+    // Validate input
+    if (isNaN(numberOfPlays) || numberOfPlays <= 0) {
+        alert("Please enter a valid number greater than 0!");
+        return;
+    }
+
+    // Reset balance for new game session
+    totalBalance = 0;
+    totalRolls = 0;
+
+    // Play the game the specified number of times
+    // Calculate the balance after a given number of plays
+    for (let i = 0; i < numberOfPlays; i++) {
+        playOnce();
+    }
+
+    // After all plays, display the final result
+    console.log("Final balance after " + numberOfPlays + " plays: $" + totalBalance);
+}
+
+// Function to play one round of the dice game
+function playOnce() {
     // Roll two dice using the formula from the rubric
     let dice1Value = Math.floor(Math.random() * 6) + 1;
     let dice2Value = Math.floor(Math.random() * 6) + 1;
